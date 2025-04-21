@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Inter", sans-serif;
   background: #f9f9f9;
@@ -10,6 +11,7 @@ body {
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 20px 30px;
+  margin: 10px 20px; /* Dodano margines, aby odsunąć navbar od krawędzi */
 }
 .navbar .navbar-container {
   display: flex;
@@ -21,11 +23,15 @@ body {
   font-size: 24px;
   font-weight: bold;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.navbar .logo .logo-text {
+  display: inline;
 }
 .navbar .navbar-links {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   gap: 20px;
 }
@@ -35,60 +41,26 @@ body {
   font-size: 18px;
   padding: 10px 15px;
   border-radius: 10px;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 .navbar .navbar-links li a:hover {
   background-color: #555;
-  color: #f1f1f1;
 }
-
-.main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 50vh;
-  text-align: center;
-}
-.main .container h1 {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 56px;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
-  color: #1f2937;
-}
-.main .container p {
-  font-size: 20px;
-  color: #333;
-  line-height: 1.5;
-}
-
-.hamburger {
+.navbar .hamburger {
   display: none;
   color: white;
   font-size: 24px;
   cursor: pointer;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.logo .logo-text {
-  display: inline;
-}
-
 @media (max-width: 768px) {
   .navbar .navbar-container {
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
   }
   .navbar .navbar-links {
     display: none;
     flex-direction: column;
     gap: 10px;
-    margin-top: 20px;
   }
   .navbar .navbar-links.active {
     display: flex;
@@ -96,9 +68,9 @@ body {
   .navbar .hamburger {
     display: block;
   }
-  .navbar .logo-text {
+  .navbar .logo .logo-text {
     display: none;
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=navbar.css.map */

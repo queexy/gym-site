@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>💪 Fuel Your Progress</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css"> <!-- Dodano ten link -->
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/bmi.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
     <div class="nav">
@@ -25,17 +26,28 @@
             </div>
           </nav>
     </div>
-    <div class="main">
-        <div class="container">
-            <h1><i class="fa-solid fa-dumbbell"></i> Fuel Your Progress</h1>
-            <p>
-                Smart fitness tools to optimize your training and nutrition.<br>
-                TDEE calculator, cutting/bulking targets, and more — all in one place.
-            </p>
+    <div class="container">
+        <div class="gender-group">
+            <label for="man">
+                <input type="radio" id="man" name="gender" value="Man">
+                Male
+            </label>
+            <label for="woman">
+                <input type="radio" id="woman" name="gender" value="Woman">
+                Female
+            </label>
         </div>
+        <label for="age">Age: </label>
+        <input type="number" id="age" placeholder="2-120"><br>
+        <label for="height">Height: </label>
+        <input type="number" id="height" placeholder="cm"><br>
+        <label for="weight">Weight: </label>
+        <input type="number" id="weight" placeholder="kg"><br>
+        <button onclick="validateForm()">Calculate BMI</button><br>
+        <h3 id="result"></h3>
     </div>
 </body>
+<script src="script/bmi.js"></script>
 <script src="https://kit.fontawesome.com/60b2786545.js" crossorigin="anonymous"></script>
 <script src="script/hamburger-menu.js"></script>
-<script src="script/tdee.js"></script>
 </html>
