@@ -1,6 +1,6 @@
 .navbar {
   background-color: #1f2937;
-  color: #fff;
+  color: #f9f9f9;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 20px 30px;
@@ -12,7 +12,7 @@
   align-items: center;
 }
 .navbar .logo {
-  color: white;
+  color: #f9f9f9;
   font-size: 24px;
   font-weight: bold;
   text-decoration: none;
@@ -30,7 +30,7 @@
 }
 .navbar .navbar-links li a {
   text-decoration: none;
-  color: white;
+  color: #f9f9f9;
   font-size: 18px;
   padding: 10px 15px;
   border-radius: 10px;
@@ -40,9 +40,20 @@
 }
 .navbar .hamburger {
   display: none;
-  color: white;
+  color: #f9f9f9;
   font-size: 24px;
   cursor: pointer;
+}
+
+.theme-toggle {
+  font-size: 20px;
+  color: #f9f9f9;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.theme-toggle:hover {
+  transform: scale(1.2);
+  color: white;
 }
 
 @media (max-width: 768px) {

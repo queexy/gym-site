@@ -1,3 +1,5 @@
+
+
 function validateForm() {
     const gender = document.querySelector('input[name="gender"]:checked');
     const age = document.getElementById('age').value;

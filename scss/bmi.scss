@@ -1,7 +1,39 @@
+@import 'colors';
+
 body {
     font-family: 'Inter', sans-serif;
-    background: #f9f9f9;
+    background: $main-color-light;
     margin: 0;
+}
+
+body.dark-mode {
+    background: $main-color-night;
+    color: $text-color-light;
+
+    input[type="number"], button {
+        background-color: $text-color-dark;
+        color: $text-color-light;
+        border: 1px solid $secondary-color;
+    }
+
+    #result {
+        color: $text-color-light;
+    }
+}
+
+body.light-mode {
+    background: $main-color-light;
+    color: $text-color-dark;
+
+    input[type="number"], button {
+        background-color: $main-color-light;
+        color: $text-color-dark;
+        border: 1px solid lighten($secondary-color, 20%);
+    }
+
+    #result {
+        color: $text-color-dark;
+    }
 }
 
 .container {
@@ -32,14 +64,14 @@ body {
     input[type="number"] {
         margin-bottom: 15px;
         padding: 10px;
-        border: 1px solid #555;
+        border: 1px solid $secondary-color;
         border-radius: 16px;
         width: 100%;
     }
 
     button {
-        background-color: #1f2937;
-        color: white;
+        background-color: $btn-bg-color;
+        color: $text-color-light;
         border: none;
         padding: 10px 20px;
         border-radius: 16px;
@@ -48,14 +80,14 @@ body {
         transition: background-color 0.3s ease;
 
         &:hover {
-            background-color: #555;
+            background-color: $btn-hover-bg-color;
         }
     }
 
     #result {
         margin-top: 20px;
         font-size: 20px;
-        color: #1f2937;
+        color: $text-color-dark;
     }
 }
 

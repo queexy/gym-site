@@ -4,101 +4,130 @@ body {
   margin: 0;
 }
 
-.navbar {
+body.dark-mode {
+  background: #1f2937;
+  color: #f9f9f9;
+}
+body.dark-mode .main .container h1 {
+  color: #f9f9f9;
+}
+body.dark-mode .main .container p {
+  color: #f9f9f9;
+}
+body.dark-mode .block-container {
+  display: flex;
+  justify-content: flex-end;
+}
+body.dark-mode .block-container .block {
   background-color: #1f2937;
-  color: #fff;
   border-radius: 16px;
+  margin: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 20px 30px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.navbar .navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+body.dark-mode .block-container .block i {
+  font-size: 40px;
+  color: #f9f9f9;
+  margin-bottom: 10px;
 }
-.navbar .logo {
-  color: white;
+body.dark-mode .block-container .block h2 {
   font-size: 24px;
-  font-weight: bold;
+  margin: 10px 0;
+  color: #f9f9f9;
+}
+body.dark-mode .block-container .block p {
+  font-size: 16px;
+  color: #f9f9f9;
+  margin-bottom: 20px;
+}
+body.dark-mode .block-container .block .btn {
+  display: inline-block;
+  background-color: #e2e8f0;
+  color: #1f2937;
+  padding: 10px 20px;
+  border-radius: 8px;
   text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
-.navbar .navbar-links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 20px;
-}
-.navbar .navbar-links li a {
-  text-decoration: none;
-  color: white;
-  font-size: 18px;
-  padding: 10px 15px;
-  border-radius: 10px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-.navbar .navbar-links li a:hover {
+body.dark-mode .block-container .block .btn:hover {
   background-color: #555;
-  color: #f1f1f1;
+}
+body.dark-mode .block-container .block:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+body.light-mode {
+  background: #f9f9f9;
+  color: #1f2937;
+}
+body.light-mode .block-container {
+  display: flex;
+  justify-content: flex-end;
+}
+body.light-mode .block-container .block {
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  margin: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+body.light-mode .block-container .block i {
+  font-size: 40px;
+  color: #1f2937;
+  margin-bottom: 10px;
+}
+body.light-mode .block-container .block h2 {
+  font-size: 24px;
+  margin: 10px 0;
+  color: #1f2937;
+}
+body.light-mode .block-container .block p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+body.light-mode .block-container .block .btn {
+  display: inline-block;
+  background-color: #1f2937;
+  color: #f9f9f9;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+body.light-mode .block-container .block .btn:hover {
+  background-color: #555;
+}
+body.light-mode .block-container .block:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
 .main {
-  display: flex;
-  justify-content: center;
+  display: block;
+}
+.main .container {
   align-items: center;
-  min-height: 50vh;
   text-align: center;
+  min-height: 40vh;
+  margin-top: 30vh;
 }
 .main .container h1 {
   font-family: "Bebas Neue", sans-serif;
   font-size: 56px;
   letter-spacing: 2px;
   margin-bottom: 20px;
-  color: #1f2937;
 }
 .main .container p {
   font-size: 20px;
-  color: #333;
   line-height: 1.5;
-}
-
-.hamburger {
-  display: none;
-  color: white;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.logo .logo-text {
-  display: inline;
-}
-
-@media (max-width: 768px) {
-  .navbar .navbar-container {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .navbar .navbar-links {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
-  }
-  .navbar .navbar-links.active {
-    display: flex;
-  }
-  .navbar .hamburger {
-    display: block;
-  }
-  .navbar .logo-text {
-    display: none;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

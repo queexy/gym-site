@@ -1,8 +1,10 @@
+@import 'colors';
+
 .navbar {
-    background-color: #1f2937;
-    color: #fff;
+    background-color: $main-color-night;
+    color: $text-color-light;
     border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px $box-shadow-color;
     padding: 20px 30px;
     margin: 10px 20px;
 
@@ -13,7 +15,7 @@
     }
 
     .logo {
-        color: white;
+        color: $text-color-light;
         font-size: 24px;
         font-weight: bold;
         text-decoration: none;
@@ -33,22 +35,34 @@
 
         li a {
             text-decoration: none;
-            color: white;
+            color: $text-color-light;
             font-size: 18px;
             padding: 10px 15px;
             border-radius: 10px;
 
             &:hover {
-                background-color: #555;
+                background-color: $secondary-color;
             }
         }
     }
 
     .hamburger {
         display: none;
-        color: white;
+        color: $text-color-light;
         font-size: 24px;
         cursor: pointer;
+    }
+}
+
+.theme-toggle {
+    font-size: 20px;
+    color: $text-color-light;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+
+    &:hover {
+        transform: scale(1.2);
+        color: lighten($text-color-light, 20%);
     }
 }
 

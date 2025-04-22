@@ -4,6 +4,32 @@ body {
   margin: 0;
 }
 
+body.dark-mode {
+  background: #1f2937;
+  color: #f9f9f9;
+}
+body.dark-mode input[type=number], body.dark-mode button {
+  background-color: #1f2937;
+  color: #f9f9f9;
+  border: 1px solid #555;
+}
+body.dark-mode #result {
+  color: #f9f9f9;
+}
+
+body.light-mode {
+  background: #f9f9f9;
+  color: #1f2937;
+}
+body.light-mode input[type=number], body.light-mode button {
+  background-color: #f9f9f9;
+  color: #1f2937;
+  border: 1px solid #888888;
+}
+body.light-mode #result {
+  color: #1f2937;
+}
+
 .container {
   margin: 20px auto;
   max-width: 200px;
@@ -35,7 +61,7 @@ body {
 }
 .container button {
   background-color: #1f2937;
-  color: white;
+  color: #f9f9f9;
   border: none;
   padding: 10px 20px;
   border-radius: 16px;
