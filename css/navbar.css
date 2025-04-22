@@ -1,17 +1,10 @@
-@charset "UTF-8";
-body {
-  font-family: "Inter", sans-serif;
-  background: #f9f9f9;
-  margin: 0;
-}
-
 .navbar {
   background-color: #1f2937;
   color: #fff;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 20px 30px;
-  margin: 10px 20px; /* Dodano margines, aby odsunąć navbar od krawędzi */
+  margin: 10px 20px;
 }
 .navbar .navbar-container {
   display: flex;
